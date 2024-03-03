@@ -6,6 +6,10 @@
             padding: 0;
             box-sizing: border-box;
         }
+        .sec{
+            width: 100%;
+            overflow: hidden;
+        }
         nav{
             width: 100%;
             position: sticky;
@@ -294,8 +298,8 @@
         /* width: auto; */
        }
        .three #box{
-        height: 330px;
-        width: 260px;
+        height: 24rem;
+        width: 28rem;
         box-shadow: 1px 5px 4px white;
         border-radius: 15px;
         width: auto;
@@ -576,6 +580,7 @@
         .ring{
             display: flex;
             flex-direction: row;
+        
             /* gap: 5px; */
         }
         .ring .b1{
@@ -612,11 +617,14 @@
     }
     .ring{
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-wrap: wrap;
         position: relative;
         top: 50px;
         left: 60px;
-        gap: 50px;
+        gap: 4rem;
+        margin: 4rem 0rem;
     }
     #cir img {
         width: 200px;

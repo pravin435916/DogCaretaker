@@ -4,30 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            overflow: hidden;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="number"],
+        textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 150px;
+        }
+        input[type="button"] {
+            width: 100%;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
-<style>
-    h1{
-        text-align: center;
-    }
-    img {
-        float: right;
-    }
-    input{
-        padding: 10px;
-        margin: 10px 20px;
-        width: 300px;
-        border-radius: 10px;
-    }
-</style>
 <body>
-    <h1>Have Any Questions ? </h1>
-    <form action="action.jsp">
-        Name :  <input type="text"> <br>
-        Phone NO. :<input type="number"> <br>
-        Suggestion :<textarea name="" id="Suggestion" cols="30" rows="10"></textarea> <br>
-        <input type="button"> <br>
-    </form>
-    <img src="img/contact.png" alt="c">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form action="action.jsp">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required> <br>
+            <label for="phone">Phone No.:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required> <br>
+            <label for="suggestion">Suggestion:</label>
+            <textarea id="suggestion" name="suggestion" required></textarea> <br>
+            <input type="submit" value="Submit"> <br>
+        </form>
+        <img src="/assets/contact.png" alt="Contact" width="300">
+    </div>
 </body>
 </html>
